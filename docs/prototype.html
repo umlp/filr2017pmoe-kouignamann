@@ -1,2 +1,134 @@
 
-Coucouc !
+<!--
+
+
+
+
+-->
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Laravel Quickstart - Basic</title>
+    <meta name="distributor" content="Global" />
+    <meta itemprop="contentRating" content="General" />
+    <meta name="robots" content="All" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="description" content="The source of truly unique and awesome jquery plugins." />
+    <meta name="keywords" content="slider, carousel, responsive, swipe, one to one movement, touch devices, jquery, plugin, bootstrap compatible, html5, css3" />
+    <meta name="author" content="w3widgets.com">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
+    <!-- Styles -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <!-- Respomsive slider -->
+    <link href="css/responsive-calendar.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato';
+        }
+        .fa-btn {
+            margin-right: 6px;
+        }
+    </style>
+  </head>
+      <body id="app-layout">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+           <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myMenu">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">agendaperso</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myMenu">
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="monMenu">Menu<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Page 1-1</a></li>
+                  <li><a href="#">Page 1-2</a></li>
+                  <li><a href="#">Page 1-3</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Profil</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+
+
+    <div class="container">
+      <!-- Responsive calendar - START -->
+    	<div class="responsive-calendar">
+        <div class="controls">
+
+            <a class="pull-left" data-go="prev"><div class="btn btn-primary">Précédent</div></a>
+            <h4><span data-head-month></span> <span data-head-year></span></h4>
+            <a class="pull-right" data-go="next"><div class="btn btn-primary">Suivant</div></a>
+
+        </div> <hr/>
+        <div class="day-headers">
+          <div class="day header">Lun</div>
+          <div class="day header">Mar</div>
+          <div class="day header">Mer</div>
+          <div class="day header">Jeu</div>
+          <div class="day header">Ven</div>
+          <div class="day header">Sam</div>
+          <div class="day header">Dim</div>
+        </div>
+        <div class="days" data-group="days">
+
+        </div>
+      </div>
+      <!-- Responsive calendar - END -->
+
+      <button class="col-sm-offset-10 col-sm-2" > <span class="glyphicon glyphicon-plus "></span>
+          Ajouter un devoir
+      </button>
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/responsive-calendar.js"></script>
+    <script type="text/javascript">
+
+      function init() {
+          $(".responsive-calendar").responsiveCalendar(
+              {
+                  time: '2017-05',
+                  events: {
+                      "2017-05-30": {
+          			    "number": 1,
+          			    "badgeClass": "badge-warning"
+          			  },
+                      "2017-05-26": { "number": 5 },
+                      "2017-05-03": {"number": 1},
+                  },
+              }
+          );
+      }
+
+      $(document).ready(init());
+
+    </script>
+  </body>
+</html>
