@@ -1,0 +1,20 @@
+
+#myMenu{
+    text-align: center;
+}
+
+.badge-warning {
+	background-color:red;
+}
+
+.centre {
+	text-align:center;
+	padding:1%;
+	display: block;
+	margin : auto;
+	margin-top:2%;
+}
+
+.margeBasse {
+	margin-bottom:2%;
+}
